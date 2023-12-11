@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .header,
+        .description-container,
+        .filename-input,
+        .execute {
+            margin-left: -60px;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>P1 HAPI</title>
+</head>
+<body>
+    <div class="container">
+        <!-- primeira coluna -->
+        <div class="column">
+            <div class="item">
+                <div class="sub-item">
+                    <div class="sub-item-title">kV
+                    <button class="question-button" id="kv-button" tabindex="-1">?</button>
+                </div>
+                    <div class="sub-item-content">
+                        <input class="common-input" id="kv-input" type="number" placeholder="Sem valor padrão">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="sub-item">
+                    <div class="sub-item-title">mAs
+                    <button class="question-button" id="mas-button" tabindex="-1">?</button>
+                </div>
+                    <div class="sub-item-content">
+                        <input class="common-input" id="mas-input" type="number" placeholder="Sem valor padrão">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="sub-item">
+                    <div class="sub-item-title">Acquire Time
+                    <button class="question-button" id="acquire-time-button" tabindex="-1">?</button>
+                </div>
+                    <div class="sub-item-content">
+                        <input class="common-input" id="acquire-time-input" type="number" placeholder="Valor padrão = 0,01s">
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="item">
+                <div class="sub-item">
+                    <div class="sub-item-title">Number of Exposures
+                    <button class="question-button" id="exposures-button" tabindex="-1">?</button>
+                </div>
+                    <div class="sub-item-content">
+                        <input class="common-input" id="num-exposures-input" type="number" placeholder="Valor padrão = 1">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="sub-item">
+                    <div class="sub-item-title">Threshold
+                    <button class="question-button" id="threshold-button" tabindex="-1">?</button>
+                </div>
+                    <div class="sub-item-content">
+                        <input class="common-input" id="threshold-input" type="number" placeholder="Valor padrão = 30">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="sub-item">
+                    <div class="sub-item-title">Sensor Bias
+                    <button class="question-button" id="sensor-button" tabindex="-1">?</button>
+                </div>
+                    <div class="sub-item-content">
+                        <input class="common-input" id="sensor-bias-input" type="number" placeholder="Valor padrão = 300V">
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="item">
+                <div class="sub-item">
+                    <div class="sub-item-title">Gap Time 
+                    <button class="question-button" id="gap-button" tabindex="-1">?</button>
+                </div>
+                    <div class="sub-item-content">
+                        <input class="common-input" id="gap-time-input" type="number" placeholder="Sem valor padrão">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="sub-item">
+                    <div class="sub-item-title">Número de Projeções 
+                    <button class="question-button" id="projections-button" tabindex="-1">?</button>
+                </div>
+                    <div class="sub-item-content">
+                        <input class="common-input" id="num-projections-input" type="number" placeholder="Valor padrão = 360">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="sub-item">
+                    <div class="sub-item-title">Oversample
+                    <button class="question-button" id="oversample-button" tabindex="-1">?</button>
+                </div>
+                    <div class="sub-item-content">
+                        <input class="common-input" id="oversample-input" type="number" placeholder="Sem valor padrão">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+
+
+
+        <!-- segunda coluna -->
+        <div class="column">
+            <div class="item">
+                <div class="sub-item">
+                    <div class="sub-item-title">Move To
+                    <button class="question-button" id="move-button" tabindex="-1">?</button>
+                </div>
+                    <div class="sub-item-content">
+                        <input class="common-input" id="move-input" type="number" placeholder="Sem valor padrão">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="item">
+                <div class="sub-item">
+                    <div class="sub-item-title">Rotate
+                    <button class="question-button" id="rotate-button" tabindex="-1">?</button>
+                </div>
+                    <div class="sub-item-content">
+                        <input class="common-input" id="rotate-input" type="number" placeholder="Sem valor padrão">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="item">
+                <div class="sub-item">
+                    <div class="sub-item-title">Altura Scan
+                    <button class="question-button" id="scan-button" tabindex="-1">?</button>
+                </div>
+                    <div class="sub-item-content">
+                        <input class="common-input" id="scan-input" type="number" placeholder="Sem valor padrão">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="sub-item">
+                    <div class="sub-item-title">Pitch
+                    <button class="question-button" id="pitch-button" tabindex="-1">?</button>
+                </div>
+                    <div class="sub-item-content">
+                        <input class="common-input" id="pitch-input" type="number" placeholder="Valor padrão = 1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="sub-item">
+                    <div class="sub-item-title">Zero z
+                    <button class="question-button" id="zeroz-button" tabindex="-1">?</button>
+                </div>
+                    <div class="sub-item-content">
+                        <input class="common-input" id="zero-z-input" type="number" placeholder="Sem valor padrão">
+                    </div>
+                </div>
+            </div>
+
+             <div class="item">
+                <div class="sub-item">
+                    <div class="sub-item-title">Return to Origin
+                    <button class="question-button" id="origin-button" tabindex="-1">?</button>
+                </div>
+                    <div class="sub-item-content">
+                        <input class="common-input" id="return-origin-input" type="number" placeholder="Sem valor padrão">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="sub-item">
+                    <div class="sub-item-title">Foco
+                    <button class="question-button" id="foco-button" tabindex="-1">?</button>
+                </div>
+                    <div class="sub-item-content">
+                        <input class="common-input" id="foco-input" type="number" placeholder="Binário = 0 ou 1">
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="item">
+                <div class="sub-item">
+                    <div class="sub-item-title">Acquire Mode
+                    <button class="question-button" id="acquire-button" tabindex="-1">?</button>
+                </div>
+                    <div class="sub-item-content">
+                        <input class="common-input" id="acquire-mode-input" type="number" placeholder="Valor padrão = 12 bits">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="sub-item">
+                    <div class="sub-item-title">Zero Degree
+                    <button class="question-button" id="zero-degree-button" tabindex="-1">?</button>
+                </div>
+                    <div class="sub-item-content">
+                        <input class="common-input" id="zero-degree-input" type="number" placeholder="Retorna a 0">
+                    </div>
+                </div>
+            </div>
+
+            
+            
+            <!-- botao de salvar parametros -->
+            <button class="button" id="param-button" onclick="saveParametersa1()">
+                <strong>Salvar parâmetros</strong>
+            </button>
+
+        </div>
+
+
+
+
+
+        <!-- terceira coluna -->
+        <div class="column">
+
+            <!-- descrição -->
+            <div class="header">
+                <div class="title">Descrição</div>
+            </div>
+            <div class="description-container">
+            </div>
+
+
+
+            <!-- Execulções -->
+            <div class="header">
+                <div class="title">Executar</div>
+            </div>
+            <div class="execute">
+    
+                <div class="filename-input">
+                    <label for="filename">Nome do Arquivo:</label>
+                    <input type="text" id="filename" placeholder=" ">
+                </div>
+    
+            
+                <button class="button" id="download-button" onclick="gerarJson()">
+                    <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Download JSON</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </button>
+
+                <!-- botao de json upload -->
+                <div class="button-container">
+                    <input type="file" id="json-upload" accept=".json" onchange="uploadJson()" style="display: none;">
+                    <button onclick="document.getElementById('json-upload').click()" class="button"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upload &nbsp;JSON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></button>
+                    <label for="json-upload" id="file-label"></label>
+                </div> 
+
+                <!-- limpar parametros -->
+                <button class="button clear-button" id="clear-button" onclick="limparCampos()">
+                    <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Limpar &nbsp;campos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                </button>
+
+
+            </div> 
+        </div> 
+    </div>
+
+
+
+    
+    <script src='script.js'></script>
+
+
+</body>
+</html>
